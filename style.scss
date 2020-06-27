@@ -144,7 +144,57 @@ body {
         .form-control:focus {
             border-bottom: 3px solid $darkBlue;
         }
+
         .styled-checkbox {
+            position: absolute; 
+            display: none; 
+        
+            & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            color: $darkBlue;
+            }
+        
+            // Box.
+            & + label:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: bottom;
+            width: 25px;
+            height: 25px;
+            background: $white;
+            border: 2px solid $darkBlue;
+            border-radius: 50px;
+            box-shadow: 2px 5px 7px #d8d8d89c;
+            }
+            // Box checked
+            &:checked + label:before {
+            transition: 0.5s;
+            background: $red;
+            border: 2px solid $red;
+            }
+            // Checkmark. Could be replaced with an image
+            &:checked + label:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 12px;
+            background: $white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 
+            2px 0 0 $white,
+            4px 0 0 $white,
+            4px -2px 0 $white,
+            4px -4px 0 $white,
+            4px -6px 0 $white,
+            4px -8px 0 $white;
+            transform: rotate(45deg);
+            }
+        }
+        .styled-checkbox-one {
             position: absolute; 
             display: none; 
         
@@ -197,7 +247,7 @@ body {
         .opening-customized {
             margin-top: 1rem;
             .day {
-                height: 300px;
+                height: 340px;
                 width: 180px;
                 background-color: $white;
                 border-radius: 13px;
@@ -212,3 +262,4 @@ body {
   
     }
 }
+

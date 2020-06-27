@@ -216,12 +216,59 @@ body {
           transform: rotate(45deg);
 }
 
+.registration .form .styled-checkbox-one {
+  position: absolute;
+  display: none;
+}
+
+.registration .form .styled-checkbox-one + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  color: #1C314D;
+}
+
+.registration .form .styled-checkbox-one + label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border: 2px solid #1C314D;
+  border-radius: 50px;
+  -webkit-box-shadow: 2px 5px 7px #d8d8d89c;
+          box-shadow: 2px 5px 7px #d8d8d89c;
+}
+
+.registration .form .styled-checkbox-one:checked + label:before {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #F5241B;
+  border: 2px solid #F5241B;
+}
+
+.registration .form .styled-checkbox-one:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  background: #fff;
+  width: 2px;
+  height: 2px;
+  -webkit-box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+          box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .registration .form .opening-customized {
   margin-top: 1rem;
 }
 
 .registration .form .opening-customized .day {
-  height: 300px;
+  height: 340px;
   width: 180px;
   background-color: #fff;
   border-radius: 13px;
