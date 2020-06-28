@@ -15,7 +15,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 90%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -134,7 +134,7 @@ body {
 }
 
 .registration {
-  width: 90%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -148,7 +148,8 @@ body {
 
 .registration .form {
   margin-top: 2rem;
-  width: 40%;
+  min-width: 320px;
+  max-width: 600px;
 }
 
 .registration .form h4 {
@@ -198,8 +199,8 @@ body {
 .registration .form .styled-checkbox:checked + label:before {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: #F5241B;
-  border: 2px solid #F5241B;
+  background: #1C314D;
+  border: 2px solid #1C314D;
 }
 
 .registration .form .styled-checkbox:checked + label:after {
@@ -216,19 +217,48 @@ body {
           transform: rotate(45deg);
 }
 
-.registration .form .styled-checkbox-one {
+.registration .form.opening-hours {
+  min-width: 100%;
+}
+
+.registration .form.opening-hours .opening-customized {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 100%;
+}
+
+.registration .form.opening-hours .opening-customized .day {
+  height: 340px;
+  min-width: 180px;
+  background-color: #fff;
+  border-radius: 13px;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.registration .form.opening-hours .opening-customized .day h5 {
+  padding-top: .3rem;
+}
+
+.registration .form.opening-hours .opening-customized .day .pause-checkbox {
   position: absolute;
   display: none;
 }
 
-.registration .form .styled-checkbox-one + label {
+.registration .form.opening-hours .opening-customized .day .pause-checkbox + label {
   position: relative;
   cursor: pointer;
   padding: 0;
   color: #1C314D;
 }
 
-.registration .form .styled-checkbox-one + label:before {
+.registration .form.opening-hours .opening-customized .day .pause-checkbox + label:before {
   content: '';
   margin-right: 10px;
   display: inline-block;
@@ -242,14 +272,14 @@ body {
           box-shadow: 2px 5px 7px #d8d8d89c;
 }
 
-.registration .form .styled-checkbox-one:checked + label:before {
+.registration .form.opening-hours .opening-customized .day .pause-checkbox:checked + label:before {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: #F5241B;
-  border: 2px solid #F5241B;
+  background: #1C314D;
+  border: 2px solid #1C314D;
 }
 
-.registration .form .styled-checkbox-one:checked + label:after {
+.registration .form.opening-hours .opening-customized .day .pause-checkbox:checked + label:after {
   content: '';
   position: absolute;
   left: 7px;
@@ -263,21 +293,25 @@ body {
           transform: rotate(45deg);
 }
 
-.registration .form .opening-customized {
-  margin-top: 1rem;
+.registration .form.fuel .fuel-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
-.registration .form .opening-customized .day {
-  height: 340px;
-  width: 180px;
-  background-color: #fff;
-  border-radius: 13px;
-  text-align: center;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.registration .form .opening-customized .day h5 {
-  padding-top: .3rem;
+.registration .form.fuel .fuel-row .delete-row {
+  background-image: url(images/delete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 30px;
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
