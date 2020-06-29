@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <title>uniPAY Registrace</title>
 </head>
 <body>
@@ -57,6 +58,8 @@
         <h4>E-mail</h4>
         <input class="form-control form-control-lg" type="email" placeholder="">
       </div>
+      
+      <!-- OTEVÍRACÍ DOBA -->
 
       <div class="form opening-hours" style="margin-bottom: 4rem;">
         <h4>Otevírací doba</h4>
@@ -1767,12 +1770,41 @@
         <div class="fuel-row">
           <div class="fuel-column">
             <h6>Název</h6>
-            <input class="form-control form-control-lg" type="text" placeholder="Vyberte...">
+            <select class="form-control form-control-lg">
+              <option>Vyberte...</option>
+              <option>Diesel</option>
+              <option>Benzin</option>
+            </select>
           </div>
 
           <div class="fuel-column">
             <h6>Číslo</h6>
-            <input class="form-control form-control-lg" type="text" placeholder="Vyberte...">
+            <select class="form-control form-control-lg">
+              <option>Vyberte...</option>
+              <option>Diesel</option>
+              <option>Benzin</option>
+            </select>          </div>
+          <div class="delete-row"></div>
+
+        </div>
+
+        <div class="fuel-row">
+          <div class="fuel-column">
+            <h6>Název</h6>
+            <select class="form-control form-control-lg">
+              <option>Vyberte...</option>
+              <option>Diesel</option>
+              <option>Benzin</option>
+            </select>
+          </div>
+
+          <div class="fuel-column">
+            <h6>Číslo</h6>
+            <select class="form-control form-control-lg">
+              <option>Vyberte...</option>
+              <option>Diesel</option>
+              <option>Benzin</option>
+            </select>
           </div>
 
           <div class="delete-row"></div>
@@ -1782,32 +1814,25 @@
         <div class="fuel-row">
           <div class="fuel-column">
             <h6>Název</h6>
-            <input class="form-control form-control-lg" type="text" placeholder="Vyberte...">
-          </div>
+            <select class="form-control form-control-lg">
+              <option>Vyberte...</option>
+              <option>Diesel</option>
+              <option>Benzin</option>
+            </select>          </div>
 
           <div class="fuel-column">
             <h6>Číslo</h6>
-            <input class="form-control form-control-lg" type="text" placeholder="Vyberte...">
-          </div>
+            <select class="form-control form-control-lg">
+              <option>Vyberte...</option>
+              <option>Diesel</option>
+              <option>Benzin</option>
+            </select>          </div>
 
           <div class="delete-row"></div>
 
         </div>
 
-        <div class="fuel-row">
-          <div class="fuel-column">
-            <h6>Název</h6>
-            <input class="form-control form-control-lg" type="text" placeholder="Vyberte...">
-          </div>
-
-          <div class="fuel-column">
-            <h6>Číslo</h6>
-            <input class="form-control form-control-lg" type="text" placeholder="Vyberte...">
-          </div>
-
-          <div class="delete-row"></div>
-
-        </div>
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Přidat palivo</a>
 
 
       </div>

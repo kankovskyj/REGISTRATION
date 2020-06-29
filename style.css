@@ -306,6 +306,14 @@ body {
   margin-bottom: 1rem;
 }
 
+.registration .form.fuel .fuel-row .form-control.form-control-lg {
+  width: 120%;
+}
+
+.registration .form.fuel .fuel-row .form-control.form-control-lg option {
+  padding-right: 3rem;
+}
+
 .registration .form.fuel .fuel-row .delete-row {
   background-image: url(images/delete.svg);
   background-repeat: no-repeat;
@@ -313,5 +321,30 @@ body {
   background-position: center;
   width: 30px;
   height: 30px;
+}
+
+.registration .form.fuel .add-fuel {
+  background-color: #fff;
+  width: 164px;
+  height: 45px;
+  border-radius: 13px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.registration .form.fuel .add-fuel::first-letter {
+  font-size: 2rem;
+}
+
+.registration .form.fuel .btn.btn-primary.btn-lg.active {
+  background-color: #fff;
+  color: #1C314D;
+  border-radius: 13px;
+  border: none;
+  -webkit-box-shadow: 2px 5px 7px #d8d8d860;
+          box-shadow: 2px 5px 7px #d8d8d860;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: border 0.35s;
+  transition: border 0.35s;
 }
 /*# sourceMappingURL=style.css.map */
