@@ -9,7 +9,7 @@
     <title>uniPAY Registrace</title>
 </head>
 <body>
-
+  <!-- NAVIGACE -->
   <nav class="nav">
       <div class="nav-items">
         <div class="nav-logo"></div>
@@ -26,9 +26,11 @@
       </div>
   </nav>
 
+  <!-- HLAVNÍ WRAPPER -->
   <section class="registration">
       <h1>Revize registrace do aplikace uniPAY</h1>
-
+      
+      <!-- ÚVODNÍ INFO -->
       <div class="form name">
         <h4>Název</h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
@@ -60,7 +62,6 @@
       </div>
       
       <!-- OTEVÍRACÍ DOBA -->
-
       <div class="form opening-hours" style="margin-bottom: 4rem;">
         <h4>Otevírací doba</h4>
         <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
@@ -189,8 +190,8 @@
             </div>
             <h6>PAUZA</h6>
             
-            <input class="pause-checkbox" id="pause-checkbox" type="checkbox" value="value1">
-            <label for="pause-checkbox">Bez pauzy</label>
+            <input class="pause-checkbox" id="pause-checkbox-one" type="checkbox" value="value1">
+            <label for="pause-checkbox-one">Bez pauzy</label>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -430,8 +431,8 @@
             </div>
             <h6>PAUZA</h6>
             
-            <input class="pause-checkbox" id="pause-checkbox" type="checkbox" value="value1">
-            <label for="pause-checkbox">Bez pauzy</label>
+            <input class="pause-checkbox" id="pause-checkbox-two" type="checkbox" value="value1">
+            <label for="pause-checkbox-two">Bez pauzy</label>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -671,8 +672,8 @@
             </div>
             <h6>PAUZA</h6>
             
-            <input class="pause-checkbox" id="pause-checkbox" type="checkbox" value="value1">
-            <label for="pause-checkbox">Bez pauzy</label>
+            <input class="pause-checkbox" id="pause-checkbox-three" type="checkbox" value="value1">
+            <label for="pause-checkbox-three">Bez pauzy</label>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -912,8 +913,8 @@
             </div>
             <h6>PAUZA</h6>
             
-            <input class="pause-checkbox" id="pause-checkbox" type="checkbox" value="value1">
-            <label for="pause-checkbox">Bez pauzy</label>
+            <input class="pause-checkbox" id="pause-checkbox-four" type="checkbox" value="value1">
+            <label for="pause-checkbox-four">Bez pauzy</label>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -1153,8 +1154,8 @@
             </div>
             <h6>PAUZA</h6>
             
-            <input class="pause-checkbox" id="pause-checkbox" type="checkbox" value="value1">
-            <label for="pause-checkbox">Bez pauzy</label>
+            <input class="pause-checkbox" id="pause-checkbox-five" type="checkbox" value="value1">
+            <label for="pause-checkbox-five">Bez pauzy</label>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -1393,8 +1394,8 @@
             </div>
             <h6>PAUZA</h6>
             
-            <input class="pause-checkbox" id="pause-checkbox" type="checkbox" value="value1">
-            <label for="pause-checkbox">Bez pauzy</label>
+            <input class="pause-checkbox" id="pause-checkbox-six" type="checkbox" value="value1">
+            <label for="pause-checkbox-six">Bez pauzy</label>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -1634,8 +1635,8 @@
             </div>
             <h6>PAUZA</h6>
             
-            <input class="pause-checkbox" id="pause-checkbox" type="checkbox" value="value1">
-            <label for="pause-checkbox">Bez pauzy</label>
+            <input class="pause-checkbox" id="pause-checkbox-seven" type="checkbox" value="value1">
+            <label for="pause-checkbox-seven">Bez pauzy</label>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -1759,7 +1760,7 @@
       </div>
 
       <!-- PHOTO UPLOAD-->
-      <div class="form">
+      <div class="form photos">
         <h4>Fotky Vaší čerpací stanice</h4>
       </div>
 
@@ -1779,11 +1780,8 @@
 
           <div class="fuel-column">
             <h6>Číslo</h6>
-            <select class="form-control form-control-lg">
-              <option>Vyberte...</option>
-              <option>Diesel</option>
-              <option>Benzin</option>
-            </select>          </div>
+            <input class="form-control form-control-lg" type="tel" placeholder="">
+          </div>
           <div class="delete-row"></div>
 
         </div>
@@ -1800,11 +1798,8 @@
 
           <div class="fuel-column">
             <h6>Číslo</h6>
-            <select class="form-control form-control-lg">
-              <option>Vyberte...</option>
-              <option>Diesel</option>
-              <option>Benzin</option>
-            </select>
+            <input class="form-control form-control-lg" type="tel" placeholder="">
+
           </div>
 
           <div class="delete-row"></div>
@@ -1822,11 +1817,8 @@
 
           <div class="fuel-column">
             <h6>Číslo</h6>
-            <select class="form-control form-control-lg">
-              <option>Vyberte...</option>
-              <option>Diesel</option>
-              <option>Benzin</option>
-            </select>          </div>
+            <input class="form-control form-control-lg" type="tel" placeholder="">
+          </div>
 
           <div class="delete-row"></div>
 
@@ -1837,12 +1829,114 @@
 
       </div>
 
+      <!-- SLUŽBY -->
+      <div class="form services">
+        <h4>Služby</h4>
+      </div>
 
+      <!-- PLATBY -->
+      <div class="form payments">
+        <h4>Akceptované platební metody</h4>
 
+        <h6>KARTY</h6>
+        <div class="cards-section">
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p1" type="checkbox" value="value1">
+            <label for="styled-checkbox-p1"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p2" type="checkbox" value="value1">
+            <label for="styled-checkbox-p2"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p3" type="checkbox" value="value1">
+            <label for="styled-checkbox-p3"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p4" type="checkbox" value="value1">
+            <label for="styled-checkbox-p4"></label>
+          </div>
+        </div>
 
-      
+        <h6>FLEET</h6>
+        <div class="cards-section">
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p5" type="checkbox" value="value1">
+            <label for="styled-checkbox-p5"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p6" type="checkbox" value="value1">
+            <label for="styled-checkbox-p6"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p7" type="checkbox" value="value1">
+            <label for="styled-checkbox-p7"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p8" type="checkbox" value="value1">
+            <label for="styled-checkbox-p8"></label>
+          </div>
+        </div>
+
+        <h6>STRAVENKOVE</h6>
+        <div class="cards-section">
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p9" type="checkbox" value="value1">
+            <label for="styled-checkbox-p9"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p10" type="checkbox" value="value1">
+            <label for="styled-checkbox-p10"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p11" type="checkbox" value="value1">
+            <label for="styled-checkbox-p11"></label>
+          </div>
+          <div class="method">
+            <img src="https://picsum.photos/200" alt="" width="50px" height="35px">
+            <input class="styled-checkbox pay" id="styled-checkbox-p12" type="checkbox" value="value1">
+            <label for="styled-checkbox-p12"></label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- INFORMACE -->
+      <div class="form info">
+        <h4>Informace o čerpací stanici</h4>
+        <div class="info input-group-prepend">
+          <textarea class="form-control" placeholder="Vyplňte..."></textarea>
+        </div>
+      </div>
+
+      <!-- POTVRZENÍ -->
+      <div class="form confirmation">
+        <input class="styled-checkbox" id="styled-checkbox-agree" type="checkbox" value="value1">
+        <label for="styled-checkbox-agree" class="agree-label">Souhlasím se zpracováním údajů</label>
+        <div class="btns">
+          <div class="btn-send">Odeslat ke schválení</div>
+          <div class="btn-cancel">Zrušit</div>
+        </div>
+        
+      </div>
 
   </section>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <span>uniPAY Registrace. Všechna práva vyhrazena.</span>
+      </div>
 
 
 
