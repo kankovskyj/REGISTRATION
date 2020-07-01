@@ -9,3 +9,7 @@ $('.cb-value').click(function() {
       $("#active-state").text("Neaktivní");
     }
   });
+
+  $('#styled-checkbox-nonstop').click(function(){
+    $('.day').toggleClass("disable");
+  });

@@ -8,6 +8,12 @@
   src: url(font/SegoePro-Bold.woff);
 }
 
+.disable {
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
+  cursor: not-allowed;
+}
+
 body {
   background-color: #F3F4FA;
   font-family: "Segoe Pro Semibold";
@@ -32,8 +38,8 @@ body {
 }
 
 .nav .nav-items .nav-logo {
-  width: 150px;
-  height: 2.5rem;
+  min-width: 150px;
+  min-height: 2.5rem;
   background-image: url(images/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -381,7 +387,8 @@ body {
           flex-direction: column;
   -webkit-box-shadow: 2px 5px 7px #d8d8d860;
           box-shadow: 2px 5px 7px #d8d8d860;
-  margin: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .registration .form.payments .cards-section .method img {
