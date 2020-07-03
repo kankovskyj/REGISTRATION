@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <title>uniPAY Registrace</title>
+    <script src="dropzone.js"></script>
+    <link rel="stylesheet" href="dropzone.css">
 </head>
 <body>
   <!-- NAVIGACE -->
@@ -41,8 +43,18 @@
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
 
-      <div class="form address">
-        <h4>Adresa čerpací stanice</h4>
+      <div class="form street">
+        <h4>Ulice, číslo popisné</h4>
+        <input class="form-control form-control-lg" type="text" placeholder="">
+      </div>
+
+      <div class="form city">
+        <h4>Město</h4>
+        <input class="form-control form-control-lg" type="text" placeholder="">
+      </div>
+
+      <div class="form postal">
+        <h4>PSČ</h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
 
@@ -62,7 +74,7 @@
       </div>
       
       <!-- OTEVÍRACÍ DOBA -->
-      <div class="form opening-hours" style="margin-bottom: 4rem;">
+      <div class="form opening-hours">
         <h4>Otevírací doba</h4>
         <input class="styled-checkbox" id="styled-checkbox-nonstop" type="checkbox" value="value1">
         <label for="styled-checkbox-nonstop">NONSTOP</label>
@@ -1789,13 +1801,43 @@
       <!-- PHOTO UPLOAD-->
       <div class="form photos">
         <h4>Fotky Vaší čerpací stanice</h4>
+        <div class="photo-wrapper">
+          <form action="/file-upload" class="dropzone" id="photos-dropzone"></form>
+          <form action="/file-upload" class="dropzone" id="photos-dropzone"></form>
+          <form action="/file-upload" class="dropzone" id="photos-dropzone"></form>
+          <form action="/file-upload" class="dropzone" id="photos-dropzone"></form>
+          <form action="/file-upload" class="dropzone" id="photos-dropzone"></form>
+
+        </div>
       </div>
 
       <!-- PALIVA -->
-      <div class="form fuel">
+      <div class="form fuel" id="fuel-container">
       <h4>Palivo</h4>
 
-        <div class="fuel-row">
+      <section class="fuel-row">
+        <div class="fuel-column">
+          <h6>Název</h6>
+          <select class="form-control form-control-lg">
+            <option>Vyberte...</option>
+            <option>Diesel</option>
+            <option>Benzin</option>
+          </select>
+        </div>
+
+        <div class="fuel-column">
+          <h6>Číslo</h6>
+          <input class="form-control form-control-lg" type="tel" placeholder="">
+        </div>
+
+        <div class="delete-column">
+          <h6>Smazat</h6>
+          <div class="delete-img" id="delete-fuel"></div>
+        </div>
+
+      </section>
+
+        <section class="fuel-row">
           <div class="fuel-column">
             <h6>Název</h6>
             <select class="form-control form-control-lg">
@@ -1809,11 +1851,15 @@
             <h6>Číslo</h6>
             <input class="form-control form-control-lg" type="tel" placeholder="">
           </div>
-          <div class="delete-row"></div>
 
-        </div>
+          <div class="delete-column">
+            <h6>Smazat</h6>
+            <div class="delete-img" id="delete-fuel"></div>
+          </div>
 
-        <div class="fuel-row">
+        </section>
+
+        <section class="fuel-row">
           <div class="fuel-column">
             <h6>Název</h6>
             <select class="form-control form-control-lg">
@@ -1826,35 +1872,18 @@
           <div class="fuel-column">
             <h6>Číslo</h6>
             <input class="form-control form-control-lg" type="tel" placeholder="">
-
           </div>
 
-          <div class="delete-row"></div>
-
-        </div>
-
-        <div class="fuel-row">
-          <div class="fuel-column">
-            <h6>Název</h6>
-            <select class="form-control form-control-lg">
-              <option>Vyberte...</option>
-              <option>Diesel</option>
-              <option>Benzin</option>
-            </select>          </div>
-
-          <div class="fuel-column">
-            <h6>Číslo</h6>
-            <input class="form-control form-control-lg" type="tel" placeholder="">
+          <div class="delete-column">
+            <h6>Smazat</h6>
+            <div class="delete-img" id="delete-fuel"></div>
           </div>
 
-          <div class="delete-row"></div>
-
-        </div>
-
-        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Přidat palivo</a>
-
+        </section>
 
       </div>
+      <a id="add-fuel" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Přidat palivo</a>
+
 
       <!-- SLUŽBY -->
       <div class="form services">
@@ -1974,3 +2003,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>   
 </body>
 </html>
+

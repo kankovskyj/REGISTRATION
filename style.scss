@@ -17,7 +17,7 @@ $darkBlue: #1C314D;
 $green: #44E214;
 $red: #F5241B;
 .disable {
-    filter: opacity(50%);
+    display: none;
     cursor: not-allowed;
 }
 
@@ -33,7 +33,7 @@ body {
     .nav-items {
         display: flex;
         justify-content: space-evenly;
-        width: 95%;
+        width: 85%;
         margin-left: auto;
         margin-right: auto;
         .nav-logo {
@@ -286,6 +286,19 @@ body {
         }
     }
 
+    .form.photos {
+            min-width: 100%;
+        .photo-wrapper {
+            min-width: 100%;
+            display: flex;
+            form {
+                min-height: 250px;
+                min-width: 250px;
+                margin-right: 1rem;
+            }
+        }
+    }
+
     .form.fuel {
         .fuel-row {
             display: flex;
@@ -298,35 +311,35 @@ body {
                     padding-right: 3rem;
                 }
             }
-            .delete-row {
-                background-image: url(images/delete.svg); //zmenit barvu v illustratoru
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
-                width: 30px;
-                height: 30px;
-                
+            .delete-column {
+                h6 {
+                    visibility: hidden;
+                }
+                .delete-img {
+                    background-image: url(images/delete.svg); //zmenit barvu v illustratoru
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    width: 30px;
+                    height: 30px;
+                }
+                .delete-img:hover {
+                    cursor: pointer;
+                }
             }
         }
-        .add-fuel {
-            background-color: $white;
-            width: 164px;
-            height: 45px;
-            border-radius: 13px;
-            line-height: 50px;
-            text-align: center;
-            &::first-letter {
-                font-size: 2rem;
-            }
-        }
-        .btn.btn-primary.btn-lg.active {
-            background-color: $white;
-            color: $darkBlue;
-            border-radius: 13px;
-            border: none;
-            box-shadow: 2px 5px 7px #d8d8d860;
-            border-bottom: 3px solid transparent;
-            transition: border 0.35s;
+    }
+    //add fuel button
+    .btn.btn-primary.btn-lg.active {
+        background-color: $white;
+        color: $darkBlue;
+        border-radius: 13px;
+        border: none;
+        box-shadow: 2px 5px 7px #d8d8d860;
+        border-bottom: 3px solid transparent;
+        transition: border 0.35s;
+        i {
+            font-size: 1rem;
         }
     }
 

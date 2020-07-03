@@ -9,8 +9,7 @@
 }
 
 .disable {
-  -webkit-filter: opacity(50%);
-          filter: opacity(50%);
+  display: none;
   cursor: not-allowed;
 }
 
@@ -32,7 +31,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 95%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -311,6 +310,23 @@ body {
           transform: rotate(45deg);
 }
 
+.registration .form.photos {
+  min-width: 100%;
+}
+
+.registration .form.photos .photo-wrapper {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.registration .form.photos .photo-wrapper form {
+  min-height: 250px;
+  min-width: 250px;
+  margin-right: 1rem;
+}
+
 .registration .form.fuel .fuel-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,7 +348,11 @@ body {
   padding-right: 3rem;
 }
 
-.registration .form.fuel .fuel-row .delete-row {
+.registration .form.fuel .fuel-row .delete-column h6 {
+  visibility: hidden;
+}
+
+.registration .form.fuel .fuel-row .delete-column .delete-img {
   background-image: url(images/delete.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -341,20 +361,11 @@ body {
   height: 30px;
 }
 
-.registration .form.fuel .add-fuel {
-  background-color: #fff;
-  width: 164px;
-  height: 45px;
-  border-radius: 13px;
-  line-height: 50px;
-  text-align: center;
+.registration .form.fuel .fuel-row .delete-column .delete-img:hover {
+  cursor: pointer;
 }
 
-.registration .form.fuel .add-fuel::first-letter {
-  font-size: 2rem;
-}
-
-.registration .form.fuel .btn.btn-primary.btn-lg.active {
+.registration .btn.btn-primary.btn-lg.active {
   background-color: #fff;
   color: #1C314D;
   border-radius: 13px;
@@ -364,6 +375,10 @@ body {
   border-bottom: 3px solid transparent;
   -webkit-transition: border 0.35s;
   transition: border 0.35s;
+}
+
+.registration .btn.btn-primary.btn-lg.active i {
+  font-size: 1rem;
 }
 
 .registration .form.payments .cards-section {
