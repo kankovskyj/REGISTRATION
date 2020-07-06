@@ -165,7 +165,7 @@ body {
 .registration .form {
   margin-top: 2rem;
   min-width: 320px;
-  max-width: 600px;
+  width: 600px;
 }
 
 .registration .form h4 {
@@ -379,6 +379,91 @@ body {
 
 .registration .btn.btn-primary.btn-lg.active i {
   font-size: 1rem;
+}
+
+.registration .form.services {
+  width: 1250px;
+}
+
+.registration .form.services .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.registration .form.services .service .column-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registration .form.services .service .column-left .forms-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.registration .form.services .service .column-left .forms-top .form-one {
+  margin-right: 1rem;
+}
+
+.registration .form.services .service .column-left .forms-top .form-one input {
+  width: 250px;
+}
+
+.registration .form.services .service .column-left .forms-top .form-two input {
+  width: 250px;
+}
+
+.registration .form.services .service .column-left .service-photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.registration .form.services .service .column-left .service-photos form {
+  margin-right: 1rem;
+}
+
+.registration .form.services .service .column-right {
+  margin-right: 1rem;
+}
+
+.registration .form.services .service .column-right textarea {
+  resize: none;
+  height: 316px;
+  width: 450px;
+}
+
+.registration .form.services .service .delete-column {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.registration .form.services .service .delete-column .delete-img {
+  background-image: url(images/delete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.registration .form.services .service .delete-column .delete-img:hover {
+  cursor: pointer;
 }
 
 .registration .form.payments .cards-section {

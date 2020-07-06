@@ -1,3 +1,4 @@
+
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -3114,6 +3115,7 @@ Dropzone.forElement = function (element) {
 
   return element.dropzone;
 }; // Set to false if you don't want Dropzone to automatically find and attach to .dropzone elements.
+
 
 
 Dropzone.autoDiscover = true; // Looks for all .dropzone elements and creates a dropzone for them

@@ -149,7 +149,7 @@ body {
     .form {
         margin-top: 2rem;
         min-width: 320px;
-        max-width: 600px;
+        width: 600px;
         h4 {
             color: $darkBlue;
         }
@@ -329,7 +329,6 @@ body {
             }
         }
     }
-    //add fuel button
     .btn.btn-primary.btn-lg.active {
         background-color: $white;
         color: $darkBlue;
@@ -340,6 +339,67 @@ body {
         transition: border 0.35s;
         i {
             font-size: 1rem;
+        }
+    }
+
+    .form.services {
+        width: 1250px;
+        //background-color: red;
+        .service {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            .column-left {
+                display: flex;
+                flex-direction: column;
+                .forms-top {
+                    display: flex;
+                    margin-bottom: 1rem;
+                    //justify-content: space-between;
+                    .form-one {
+                        margin-right: 1rem;
+                        input {
+                            width: 250px;
+                        }
+                    }
+                    .form-two {
+                        input {
+                            width: 250px;
+                        }
+                    }
+                }
+                .service-photos {
+                    display: flex;
+                    form {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            .column-right {
+                margin-right: 1rem;
+                textarea {
+                    resize: none;
+                    height: 316px;
+                    width: 450px;
+                }
+            }
+
+            .delete-column {
+                margin-top: auto;
+                margin-bottom: auto;
+                .delete-img {
+                    background-image: url(images/delete.svg); //zmenit barvu v illustratoru
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    width: 30px;
+                    height: 30px;
+                }
+                .delete-img:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
 
