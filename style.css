@@ -470,12 +470,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 1250px;
 }
 
 .registration .form.payments .cards-section .method {
   background-color: #fff;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 13px;
   overflow: hidden;
   display: -webkit-box;
@@ -487,7 +488,7 @@ body {
           flex-direction: column;
   -webkit-box-shadow: 2px 5px 7px #d8d8d860;
           box-shadow: 2px 5px 7px #d8d8d860;
-  margin-right: 2rem;
+  margin-right: 0.5rem;
   margin-bottom: 2rem;
 }
 
@@ -495,6 +496,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
+  margin-bottom: -0.2rem;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .registration .form.payments .cards-section .method label {
