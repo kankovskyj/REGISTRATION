@@ -15,6 +15,7 @@
 
 body {
   width: 100%;
+  overflow-x: hidden;
   background-color: #F3F4FA;
   font-family: "Segoe Pro Semibold";
 }
@@ -251,7 +252,7 @@ body {
 
 .registration .form.opening-hours .opening-customized .day {
   height: 340px;
-  min-width: 180px;
+  min-width: 170px;
   background-color: #fff;
   border-radius: 13px;
   text-align: center;
@@ -323,8 +324,9 @@ body {
 }
 
 .registration .form.photos .photo-wrapper form {
-  min-height: 250px;
-  min-width: 250px;
+  min-height: 230px;
+  max-height: 230px;
+  min-width: 230px;
   margin-right: 1rem;
 }
 
@@ -445,7 +447,7 @@ body {
 
 .registration .form.services .service .column-right textarea {
   resize: none;
-  height: 316px;
+  height: 295px;
   width: 450px;
 }
 
@@ -509,6 +511,20 @@ body {
 
 .registration .form.payments .cards-section .method .styled-checkbox:checked + label:after {
   left: 17px;
+}
+
+.registration .form.info #nav-tab.nav.nav-tabs {
+  background-color: #F3F4FA;
+}
+
+.registration .form.info nav {
+  height: 2.5rem;
+  background-color: none !important;
+}
+
+.registration .form.info nav .nav-tabs a {
+  color: #1C314D;
+  border: none;
 }
 
 .registration .form.info textarea {

@@ -174,8 +174,8 @@
   box-sizing: border-box; }
 
 .dropzone {
-  height: 250px;
-  width: 250px;
+  height: 230px;
+  width: 230px;
   border: 2px dashed #9EAFC4;
   background: white;
   background-image: url(images/upload.svg);
@@ -271,8 +271,8 @@
       z-index: 10; }
       .dropzone .dz-preview .dz-image img {
         display: block;
-        width: 246px;
-        height: 246px;
+        width: 226px;
+        height: 226px;
         border-radius: 13px;
       }
     .dropzone .dz-preview.dz-success .dz-success-mark {

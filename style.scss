@@ -24,6 +24,7 @@ $red: #F5241B;
 
 body {
     width: 100%;
+    overflow-x: hidden;
     background-color: $offWhite;
     font-family: $regular;
 }
@@ -224,7 +225,7 @@ body {
             min-width: 100%;
             .day {
                 height: 340px;
-                min-width: 180px;
+                min-width: 170px;
                 background-color: $white;
                 border-radius: 13px;
                 text-align: center;
@@ -293,8 +294,9 @@ body {
             min-width: 100%;
             display: flex;
             form {
-                min-height: 250px;
-                min-width: 250px;
+                min-height: 230px;
+                max-height: 230px;
+                min-width: 230px;
                 margin-right: 1rem;
             }
         }
@@ -379,7 +381,7 @@ body {
                 margin-right: 1rem;
                 textarea {
                     resize: none;
-                    height: 316px;
+                    height: 295px;
                     width: 450px;
                 }
             }
@@ -440,6 +442,19 @@ body {
     }
 
     .form.info {
+        #nav-tab.nav.nav-tabs {
+            background-color: $offWhite;
+        }
+        nav {
+            height: 2.5rem;
+            background-color: none !important;
+            .nav-tabs {
+                a {
+                    color: $darkBlue;
+                    border: none;
+                }
+            }
+        }
         textarea {
             resize: none;
             height: 200px;
