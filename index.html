@@ -1916,17 +1916,37 @@
         </div>
 
         <div class="column-right">
-          <h6>Druh služby</h6>
-          <div class="info input-group-prepend">
-            <textarea class="form-control" placeholder="Vyplňte..."></textarea>
+          <h6>Popis služby</h6>
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a style="border: none; color: #1C314D;" class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Čeština</a>
+            </li>
+            <li class="nav-item">
+              <a style="border: none; color: #1C314D;" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Slovenčina</a>
+            </li>
+            <li class="nav-item">
+              <a style="border: none; color: #1C314D;" class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">English</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="info input-group-prepend">
+              <textarea class="form-control" placeholder="Vyplňte..."></textarea>
+            </div></div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="info input-group-prepend">
+              <textarea class="form-control" placeholder="Tu vyplňte..."></textarea>
+            </div></div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div class="info input-group-prepend">
+              <textarea class="form-control" placeholder="Fill in here..."></textarea>
+            </div></div>
           </div>
+          
         </div>
 
         <div class="delete-column">
           <div class="delete-img" id="delete-service"></div>
         </div>
       </section>
-
 
       </div>
       <a id="add-service" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Přidat službu</a>
@@ -2093,12 +2113,17 @@
 
   </section>
 
+
+
+
+
+
       <!-- FOOTER -->
       <div class="footer">
         <span>uniPAY Registrace. Všechna práva vyhrazena.</span>
       </div>
 
-
+      
 
 <!-- JQUERY, BSTRAP SCRIPTS-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

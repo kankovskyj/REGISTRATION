@@ -396,9 +396,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 2rem;
 }
 
@@ -443,12 +440,23 @@ body {
 
 .registration .form.services .service .column-right {
   margin-right: 1rem;
+  border: none !important;
+}
+
+.registration .form.services .service .column-right ul {
+  border: none !important;
+  height: 2.5rem;
+  background: none;
+}
+
+.registration .form.services .service .column-right ul li {
+  border: none;
 }
 
 .registration .form.services .service .column-right textarea {
+  border-top-left-radius: 0px;
   resize: none;
-  height: 295px;
-  width: 450px;
+  height: 255px;
 }
 
 .registration .form.services .service .delete-column {

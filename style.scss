@@ -350,7 +350,6 @@ body {
         .service {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             margin-bottom: 2rem;
             .column-left {
                 display: flex;
@@ -379,10 +378,19 @@ body {
             }
             .column-right {
                 margin-right: 1rem;
+                border: none !important;
+                ul {
+                    border: none !important;
+                    height: 2.5rem;
+                    background: none;
+                    li {
+                       border: none;
+                    }
+                }
                 textarea {
+                    border-top-left-radius: 0px;
                     resize: none;
-                    height: 295px;
-                    width: 450px;
+                    height: 255px;
                 }
             }
 
@@ -516,3 +524,6 @@ body {
     font-size: 0.8rem;
     line-height: 2rem;
 }
+
+
+
