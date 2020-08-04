@@ -232,6 +232,19 @@ body {
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
                 margin-right: 0.5rem;
+                .input-group {
+                    .input-group-prepend {
+                        .input-group-text {
+                            background-color: transparent;
+                            border: 1px solid $lightBlue;
+                        }
+                    }
+                    .custom-select {
+                        height: initial;
+                        border: 1px solid $lightBlue;
+                        border-left: none;
+                    }
+                }
                 h5 {
                     padding-top: .3rem;
                 }
@@ -308,8 +321,14 @@ body {
             align-items: center;
             justify-content: space-between;
             margin-bottom: 1rem;
-            .form-control.form-control-lg {
+            .custom-select {
                 width: 120%;
+                border: none;
+                border-radius: 13px;
+                height: 48px;
+                padding: .5rem 1rem;
+                box-shadow: 2px 5px 7px #d8d8d860;
+                border-bottom: 3px solid transparent;
                 option {
                     padding-right: 3rem;
                 }
@@ -389,6 +408,7 @@ body {
                 }
                 textarea {
                     border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
                     resize: none;
                     height: 255px;
                 }

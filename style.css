@@ -261,6 +261,17 @@ body {
   margin-right: 0.5rem;
 }
 
+.registration .form.opening-hours .opening-customized .day .input-group .input-group-prepend .input-group-text {
+  background-color: transparent;
+  border: 1px solid #9EAFC4;
+}
+
+.registration .form.opening-hours .opening-customized .day .input-group .custom-select {
+  height: initial;
+  border: 1px solid #9EAFC4;
+  border-left: none;
+}
+
 .registration .form.opening-hours .opening-customized .day h5 {
   padding-top: .3rem;
 }
@@ -343,11 +354,18 @@ body {
   margin-bottom: 1rem;
 }
 
-.registration .form.fuel .fuel-row .form-control.form-control-lg {
+.registration .form.fuel .fuel-row .custom-select {
   width: 120%;
+  border: none;
+  border-radius: 13px;
+  height: 48px;
+  padding: .5rem 1rem;
+  -webkit-box-shadow: 2px 5px 7px #d8d8d860;
+          box-shadow: 2px 5px 7px #d8d8d860;
+  border-bottom: 3px solid transparent;
 }
 
-.registration .form.fuel .fuel-row .form-control.form-control-lg option {
+.registration .form.fuel .fuel-row .custom-select option {
   padding-right: 3rem;
 }
 
@@ -455,6 +473,7 @@ body {
 
 .registration .form.services .service .column-right textarea {
   border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   resize: none;
   height: 255px;
 }
