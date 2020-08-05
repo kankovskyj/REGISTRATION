@@ -10,7 +10,31 @@
 
 .disable {
   display: none;
-  cursor: not-allowed;
+}
+
+.dropzone {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 13px;
+  border: 2px dashed #9EAFC4;
+  position: relative;
+  background-image: url("images/upload.svg");
+  background-size: 160px;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  cursor: pointer;
+}
+
+.dropzone::after {
+  content: "Nahrajte";
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: 1.2rem;
+  color: #9EAFC4;
 }
 
 body {
@@ -172,6 +196,44 @@ body {
 
 .registration .form h4 {
   color: #1C314D;
+}
+
+.registration .form h4 i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(images/info.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: text-top;
+}
+
+.registration .form [data-title]:hover:after {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  visibility: visible;
+}
+
+.registration .form [data-title]:after {
+  content: attr(data-title);
+  background-color: #9EAFC4;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 8px 20px;
+  position: absolute;
+  bottom: -1.6em;
+  left: 100%;
+  white-space: nowrap;
+  opacity: 0;
+  z-index: 9;
+  visibility: hidden;
+  border-radius: 0px 13px 13px 13px;
+}
+
+.registration .form [data-title] {
+  position: relative;
 }
 
 .registration .form .form-control {
@@ -475,7 +537,7 @@ body {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   resize: none;
-  height: 255px;
+  height: 275px;
 }
 
 .registration .form.services .service .delete-column {
