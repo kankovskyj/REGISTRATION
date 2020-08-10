@@ -19,6 +19,10 @@ $red: #F5241B;
 .disable {
     display: none;
 }
+
+.smaller {
+    height: 240px !important;
+}
 .dropzone {
     width: 250px;
     height: 250px;
@@ -193,7 +197,7 @@ body {
         }
         [data-title]:after {
             content: attr(data-title);
-            background-color: $lightBlue;
+            background-color: $darkBlue;
             color: $white;
             font-size: 1.1rem;
             padding: 8px 20px;

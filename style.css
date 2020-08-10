@@ -12,6 +12,10 @@
   display: none;
 }
 
+.smaller {
+  height: 240px !important;
+}
+
 .dropzone {
   width: 250px;
   height: 250px;
@@ -218,7 +222,7 @@ body {
 
 .registration .form [data-title]:after {
   content: attr(data-title);
-  background-color: #9EAFC4;
+  background-color: #1C314D;
   color: #fff;
   font-size: 1.1rem;
   padding: 8px 20px;
