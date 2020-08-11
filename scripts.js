@@ -16,7 +16,7 @@ $('.cb-value').click(function() {
 
 //add fuel
   $("#add-fuel").click(function () {
-    $("#fuel-container").append('<section class="fuel-row"><div class="fuel-column"><h6>Název</h6><select class="custom-select" id="inputGroupSelect01"><option>Vyberte...</option><option>Diesel</option><option>Benzin</option></select></div><div class="fuel-column"><h6>Číslo</h6><input class="form-control form-control-lg" type="tel" placeholder=""></div><div class="delete-column"><h6>Smazat</h6><div class="delete-img" id="delete-fuel"></div></div></section>');
+    $("#fuel-container").append('<section class="fuel-row"> <div class="fuel-column"> <h6>Název</h6> <select class="custom-select" id="inputGroupSelect01"> <option>Vyberte...</option> <option>Nafta</option> <option>Nafta zimní</option> <option>Nafta adi</option> <option>Nafta</option> <option>Nafta</option> <option>Nafta aditiva</option> <option>Nafta Bio</option> <option>Nafta Syntetic</option> <option>Natural 95</option> <option>Natural 95 adi</option> <option>Natural 98</option> <option>Natural 98 adi</option> <option>Natural 100+</option> <option>Ethanol 85</option> <option>LPG</option> <option>CNG</option> <option>LNG</option> <option>H2</option> <option>AdBlue</option> <option>Elektřina</option> </select> </div> <div class="fuel-column"> <h6>Číslo</h6> <input class="form-control form-control-lg" type="tel" placeholder=""> </div> <div class="delete-column"> <h6>Smazat</h6> <div class="delete-img" id="delete-fuel"></div> </div> </section>');
   });
 
 //add service
