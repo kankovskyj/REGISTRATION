@@ -8,6 +8,10 @@
   src: url(font/SegoePro-Bold.woff);
 }
 
+.hide {
+  opacity: 0;
+}
+
 .disable {
   display: none;
 }
@@ -50,7 +54,7 @@ body {
 
 .nav {
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   background-color: #fff;
 }
 
@@ -58,12 +62,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .nav .nav-items .nav-logo {
@@ -76,133 +79,74 @@ body {
   margin-bottom: auto;
 }
 
-.nav .nav-items .right-controls {
-  margin-left: auto;
+.nav .nav-items .btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.nav .nav-items .right-controls .nav-btn {
-  margin-left: 2rem;
-  width: 12rem;
-  height: 2.5rem;
-  margin-top: auto;
-  margin-bottom: auto;
-  background-color: #1C314D;
-  border-radius: 13px;
-  text-align: center;
-  line-height: 2.5rem;
-  color: #fff;
-  cursor: pointer;
+  margin-left: auto;
+  margin-right: 2rem;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
 
-.nav .nav-items .right-controls .nav-btn:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
-}
-
-.nav .nav-items .right-controls .nav-btn.btn-cancel {
-  background-color: #F5241B;
-}
-
-.nav .nav-items .right-controls .nav-btn.btn-invite {
-  color: #1C314D;
-  background-color: transparent;
-  border: solid 2px #1C314D;
-  line-height: 2.4rem;
-}
-
-.nav .nav-items .right-controls .nav-btn.btn-invite:hover {
-  color: #fff;
-  background-color: #1C314D;
-}
-
-.nav .nav-items .right-controls .toggle-btn {
-  width: 4.5rem;
-  height: 2.5rem;
-  margin-top: auto;
-  margin-bottom: auto;
-  border-radius: 50px;
-  display: inline-block;
-  position: relative;
-  background: #F5241B;
-  cursor: pointer;
-  -webkit-transition: background-color .40s ease-in-out;
-  transition: background-color .40s ease-in-out;
-}
-
-.nav .nav-items .right-controls .toggle-btn.active {
-  background: #44E214;
-}
-
-.nav .nav-items .right-controls .toggle-btn.active .round-btn {
-  left: 37px;
-}
-
-.nav .nav-items .right-controls .toggle-btn .round-btn {
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  left: 5px;
-  top: 50%;
-  margin-top: -15px;
-  -webkit-transition: all .30s ease-in-out;
-  transition: all .30s ease-in-out;
-}
-
-.nav .nav-items .right-controls .toggle-btn .cb-value {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 9;
-  cursor: pointer;
-}
-
-.nav .nav-items .right-controls p {
-  width: 4rem;
-  line-height: 2.5rem;
+.nav .nav-items .btns div {
   margin-left: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-weight: bold;
+  margin-right: 1rem;
 }
 
-.registration {
+.nav .nav-items .burger {
+  width: 40px;
+  height: 40px;
+  background-image: url(images/burger.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.content {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.registration h1 {
+h1 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 4rem;
   color: #1C314D;
 }
 
-.registration .form {
+.button {
+  width: 12rem;
+  height: 2.8rem;
+  border-radius: 13px;
+  text-align: center;
+  line-height: 2.8rem;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  background-color: #1C314D;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.button:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.form {
   margin-top: 2rem;
   min-width: 320px;
   width: 600px;
 }
 
-.registration .form h4 {
+.form h4 {
   color: #1C314D;
 }
 
-.registration .form h4 i {
+.form h4 i {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -213,14 +157,14 @@ body {
   vertical-align: text-top;
 }
 
-.registration .form [data-title]:hover:after {
+.form [data-title]:hover:after {
   opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   visibility: visible;
 }
 
-.registration .form [data-title]:after {
+.form [data-title]:after {
   content: attr(data-title);
   background-color: #1C314D;
   color: #fff;
@@ -236,11 +180,11 @@ body {
   border-radius: 0px 13px 13px 13px;
 }
 
-.registration .form [data-title] {
+.form [data-title] {
   position: relative;
 }
 
-.registration .form .form-control {
+.form .form-control {
   border-radius: 13px;
   border: none;
   -webkit-box-shadow: 2px 5px 7px #d8d8d860;
@@ -250,23 +194,23 @@ body {
   transition: border 0.35s;
 }
 
-.registration .form .form-control:focus {
+.form .form-control:focus {
   border-bottom: 3px solid #1C314D;
 }
 
-.registration .form .styled-checkbox {
+.form .styled-checkbox {
   position: absolute;
   display: none;
 }
 
-.registration .form .styled-checkbox + label {
+.form .styled-checkbox + label {
   position: relative;
   cursor: pointer;
   padding: 0;
   color: #1C314D;
 }
 
-.registration .form .styled-checkbox + label:before {
+.form .styled-checkbox + label:before {
   content: '';
   margin-right: 10px;
   display: inline-block;
@@ -280,14 +224,14 @@ body {
           box-shadow: 2px 5px 7px #d8d8d89c;
 }
 
-.registration .form .styled-checkbox:checked + label:before {
+.form .styled-checkbox:checked + label:before {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background: #1C314D;
   border: 2px solid #1C314D;
 }
 
-.registration .form .styled-checkbox:checked + label:after {
+.form .styled-checkbox:checked + label:after {
   content: '';
   position: absolute;
   left: 7px;
@@ -301,11 +245,11 @@ body {
           transform: rotate(45deg);
 }
 
-.registration .form.opening-hours {
+.form.opening-hours {
   min-width: 100%;
 }
 
-.registration .form.opening-hours .opening-customized {
+.form.opening-hours .opening-customized {
   margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -316,7 +260,7 @@ body {
   min-width: 100%;
 }
 
-.registration .form.opening-hours .opening-customized .day {
+.form.opening-hours .opening-customized .day {
   height: 340px;
   min-width: 170px;
   background-color: #fff;
@@ -327,34 +271,34 @@ body {
   margin-right: 0.5rem;
 }
 
-.registration .form.opening-hours .opening-customized .day .input-group .input-group-prepend .input-group-text {
+.form.opening-hours .opening-customized .day .input-group .input-group-prepend .input-group-text {
   background-color: transparent;
   border: 1px solid #9EAFC4;
 }
 
-.registration .form.opening-hours .opening-customized .day .input-group .custom-select {
+.form.opening-hours .opening-customized .day .input-group .custom-select {
   height: initial;
   border: 1px solid #9EAFC4;
   border-left: none;
 }
 
-.registration .form.opening-hours .opening-customized .day h5 {
+.form.opening-hours .opening-customized .day h5 {
   padding-top: .3rem;
 }
 
-.registration .form.opening-hours .opening-customized .day .pause-checkbox {
+.form.opening-hours .opening-customized .day .pause-checkbox {
   position: absolute;
   display: none;
 }
 
-.registration .form.opening-hours .opening-customized .day .pause-checkbox + label {
+.form.opening-hours .opening-customized .day .pause-checkbox + label {
   position: relative;
   cursor: pointer;
   padding: 0;
   color: #1C314D;
 }
 
-.registration .form.opening-hours .opening-customized .day .pause-checkbox + label:before {
+.form.opening-hours .opening-customized .day .pause-checkbox + label:before {
   content: '';
   margin-right: 10px;
   display: inline-block;
@@ -368,14 +312,14 @@ body {
           box-shadow: 2px 5px 7px #d8d8d89c;
 }
 
-.registration .form.opening-hours .opening-customized .day .pause-checkbox:checked + label:before {
+.form.opening-hours .opening-customized .day .pause-checkbox:checked + label:before {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background: #1C314D;
   border: 2px solid #1C314D;
 }
 
-.registration .form.opening-hours .opening-customized .day .pause-checkbox:checked + label:after {
+.form.opening-hours .opening-customized .day .pause-checkbox:checked + label:after {
   content: '';
   position: absolute;
   left: 7px;
@@ -389,25 +333,25 @@ body {
           transform: rotate(45deg);
 }
 
-.registration .form.photos {
+.form.photos {
   min-width: 100%;
 }
 
-.registration .form.photos .photo-wrapper {
+.form.photos .photo-wrapper {
   min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.registration .form.photos .photo-wrapper form {
+.form.photos .photo-wrapper form {
   min-height: 230px;
   max-height: 230px;
   min-width: 230px;
   margin-right: 1rem;
 }
 
-.registration .form.fuel .fuel-row {
+.form.fuel .fuel-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,7 +364,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.registration .form.fuel .fuel-row .custom-select {
+.form.fuel .fuel-row .custom-select {
   width: 120%;
   border: none;
   border-radius: 13px;
@@ -431,15 +375,15 @@ body {
   border-bottom: 3px solid transparent;
 }
 
-.registration .form.fuel .fuel-row .custom-select option {
+.form.fuel .fuel-row .custom-select option {
   padding-right: 3rem;
 }
 
-.registration .form.fuel .fuel-row .delete-column h6 {
+.form.fuel .fuel-row .delete-column h6 {
   visibility: hidden;
 }
 
-.registration .form.fuel .fuel-row .delete-column .delete-img {
+.form.fuel .fuel-row .delete-column .delete-img {
   background-image: url(images/delete.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -448,31 +392,15 @@ body {
   height: 30px;
 }
 
-.registration .form.fuel .fuel-row .delete-column .delete-img:hover {
+.form.fuel .fuel-row .delete-column .delete-img:hover {
   cursor: pointer;
 }
 
-.registration .btn.btn-primary.btn-lg.active {
-  background-color: #fff;
-  color: #1C314D;
-  border-radius: 13px;
-  border: none;
-  -webkit-box-shadow: 2px 5px 7px #d8d8d860;
-          box-shadow: 2px 5px 7px #d8d8d860;
-  border-bottom: 3px solid transparent;
-  -webkit-transition: border 0.35s;
-  transition: border 0.35s;
-}
-
-.registration .btn.btn-primary.btn-lg.active i {
-  font-size: 1rem;
-}
-
-.registration .form.services {
+.form.services {
   width: 1250px;
 }
 
-.registration .form.services .service {
+.form.services .service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,7 +411,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.registration .form.services .service .column-left {
+.form.services .service .column-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,63 +421,63 @@ body {
           flex-direction: column;
 }
 
-.registration .form.services .service .column-left .forms-top {
+.form.services .service .column-left .forms-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
 }
 
-.registration .form.services .service .column-left .forms-top .form-one {
+.form.services .service .column-left .forms-top .form-one {
   margin-right: 1rem;
 }
 
-.registration .form.services .service .column-left .forms-top .form-one input {
+.form.services .service .column-left .forms-top .form-one input {
   width: 250px;
 }
 
-.registration .form.services .service .column-left .forms-top .form-two input {
+.form.services .service .column-left .forms-top .form-two input {
   width: 250px;
 }
 
-.registration .form.services .service .column-left .service-photos {
+.form.services .service .column-left .service-photos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.registration .form.services .service .column-left .service-photos form {
+.form.services .service .column-left .service-photos form {
   margin-right: 1rem;
 }
 
-.registration .form.services .service .column-right {
+.form.services .service .column-right {
   margin-right: 1rem;
   border: none !important;
 }
 
-.registration .form.services .service .column-right ul {
+.form.services .service .column-right ul {
   border: none !important;
   height: 2.5rem;
   background: none;
 }
 
-.registration .form.services .service .column-right ul li {
+.form.services .service .column-right ul li {
   border: none;
 }
 
-.registration .form.services .service .column-right textarea {
+.form.services .service .column-right textarea {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   resize: none;
   height: 275px;
 }
 
-.registration .form.services .service .delete-column {
+.form.services .service .delete-column {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.registration .form.services .service .delete-column .delete-img {
+.form.services .service .delete-column .delete-img {
   background-image: url(images/delete.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -558,18 +486,18 @@ body {
   height: 30px;
 }
 
-.registration .form.services .service .delete-column .delete-img:hover {
+.form.services .service .delete-column .delete-img:hover {
   cursor: pointer;
 }
 
-.registration .form.payments .cards-section {
+.form.payments .cards-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1250px;
 }
 
-.registration .form.payments .cards-section .method {
+.form.payments .cards-section .method {
   background-color: #fff;
   width: 90px;
   height: 90px;
@@ -586,9 +514,10 @@ body {
           box-shadow: 2px 5px 7px #d8d8d860;
   margin-right: 0.5rem;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
-.registration .form.payments .cards-section .method img {
+.form.payments .cards-section .method img {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
@@ -597,89 +526,56 @@ body {
   max-height: 50px;
 }
 
-.registration .form.payments .cards-section .method label {
+.form.payments .cards-section .method label {
   padding-left: 10px;
   margin: auto;
 }
 
-.registration .form.payments .cards-section .method .styled-checkbox:checked + label:after {
+.form.payments .cards-section .method .styled-checkbox:checked + label:after {
   left: 17px;
 }
 
-.registration .form.info #nav-tab.nav.nav-tabs {
+.form.info #nav-tab.nav.nav-tabs {
   background-color: #F3F4FA;
 }
 
-.registration .form.info nav {
+.form.info nav {
   height: 2.5rem;
   background-color: none !important;
 }
 
-.registration .form.info nav .nav-tabs a {
+.form.info nav .nav-tabs a {
   color: #1C314D;
   border: none;
 }
 
-.registration .form.info textarea {
+.form.info textarea {
   resize: none;
   height: 200px;
 }
 
-.registration .form.confirmation {
+.form.confirmation {
   margin-bottom: 4rem;
 }
 
-.registration .form.confirmation .styled-checkbox:checked + label:after {
+.form.confirmation .styled-checkbox:checked + label:after {
   top: 15px;
 }
 
-.registration .form.confirmation label {
+.form.confirmation label {
   font-size: 1.2rem;
 }
 
-.registration .form.confirmation .btns {
+.form.confirmation .btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.registration .form.confirmation .btns .btn-send {
   margin-top: 1rem;
-  width: 12rem;
-  height: 2.5rem;
-  background-color: #1C314D;
-  border-radius: 13px;
-  text-align: center;
-  line-height: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
 }
 
-.registration .form.confirmation .btns .btn-send:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
-}
-
-.registration .form.confirmation .btns .btn-cancel {
-  margin-top: 1rem;
-  width: 12rem;
-  height: 2.5rem;
+.form.confirmation .btns .btn-cancel {
   background-color: #F5241B;
-  border-radius: 13px;
-  text-align: center;
-  line-height: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
   margin-left: 2rem;
-}
-
-.registration .form.confirmation .btns .btn-cancel:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
 }
 
 .footer {

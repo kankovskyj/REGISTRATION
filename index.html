@@ -13,58 +13,63 @@
   <nav class="nav">
       <div class="nav-items">
         <div class="nav-logo"></div>
-        <div class="right-controls">
-            <div class="nav-btn btn-save">Uložit změny</div>
-            <div class="nav-btn btn-cancel">Zrušit změny</div>
-        </div> 
+
+        <div class="btns hide">
+          <div class="button">Test</div>
+          <div class="button">Test 2</div>
+          <div class="button">Test 3</div>
+        </div>
+
+        <div class="burger">
+        </div>
       </div>
   </nav>
 
   <!-- HLAVNÍ WRAPPER -->
-  <section class="registration">
+  <section class="content registration">
       <h1>Registrace do aplikace uniPAY</h1>
       
       <!-- ÚVODNÍ INFO -->
-      <div class="form name">
+      <div class="form">
         <h4>Název <i data-title="Informační tab"></i></h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
-      <div class="form logo">
+      <div class="form">
         <h4>Logo</h4>
         <form action="/file-upload" class="dropzone"></form>
       </div>
 
-      <div class="form id">
+      <div class="form">
         <h4>ID <i data-title="Informační tab"></i></h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
 
-      <div class="form street">
+      <div class="form">
         <h4>Ulice, číslo popisné</h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
 
-      <div class="form city">
+      <div class="form">
         <h4>Město</h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
 
-      <div class="form postal">
+      <div class="form">
         <h4>PSČ</h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
 
-      <div class="form gps">
+      <div class="form">
         <h4>GPS souřadnice <i data-title="Informační tab"></i></h4>
         <input class="form-control form-control-lg" type="text" placeholder="">
       </div>
 
-      <div class="form phone">
+      <div class="form">
         <h4>Telefon</h4>
         <input class="form-control form-control-lg" type="tel" placeholder="">
       </div>
 
-      <div class="form email">
+      <div class="form">
         <h4>E-mail</h4>
         <input class="form-control form-control-lg" type="email" placeholder="">
       </div>
@@ -1934,8 +1939,7 @@
         </section>
 
       </div>
-      <a id="add-fuel" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Přidat palivo</a>
-
+      <div class="button" id="add-fuel">+ Přidat palivo</div>
 
       <!-- SLUŽBY -->
       <div class="form services" id="services-wrapper">
@@ -1970,13 +1974,13 @@
                 <a style="border: none; color: #1C314D;" class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Čeština</a>
               </li>
               <li class="nav-item">
-                <a style="border: none; color: #1C314D;" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Slovenčina</a>
+                <a style="border: none; color: #1C314D;" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Slovenština</a>
               </li>
               <li class="nav-item">
-                <a style="border: none; color: #1C314D;" class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">English</a>
+                <a style="border: none; color: #1C314D;" class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Angličtina</a>
               </li>
               <li class="nav-item">
-                <a style="border: none; color: #1C314D;" class="nav-item nav-link" id="nav-deutsch-tab" data-toggle="tab" href="#nav-deutsch" role="tab" aria-controls="nav-deutsch" aria-selected="false">Deutsch</a>
+                <a style="border: none; color: #1C314D;" class="nav-item nav-link" id="nav-deutsch-tab" data-toggle="tab" href="#nav-deutsch" role="tab" aria-controls="nav-deutsch" aria-selected="false">Němčina</a>
               </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -1984,14 +1988,14 @@
                 <textarea class="form-control" placeholder="Vyplňte..."></textarea>
               </div></div>
               <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="info input-group-prepend">
-                <textarea class="form-control" placeholder="Tu vyplňte..."></textarea>
+                <textarea class="form-control" placeholder="Vyplňte..."></textarea>
               </div></div>
               <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div class="info input-group-prepend">
-                <textarea class="form-control" placeholder="Fill in here..."></textarea>
+                <textarea class="form-control" placeholder="Vyplňte..."></textarea>
               </div></div>
               <div class="tab-pane fade" id="nav-deutsch" role="tabpanel" aria-labelledby="nav-contact-tab">
                 <div class="info input-group-prepend">
-                  <textarea class="form-control" placeholder="Hier ausfüllen"></textarea>
+                  <textarea class="form-control" placeholder="Vyplňte..."></textarea>
                 </div>
               </div>
             </div>
@@ -2033,13 +2037,13 @@
               <a style="border: none; color: #1C314D;" class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Čeština</a>
             </li>
             <li class="nav-item">
-              <a style="border: none; color: #1C314D;" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Slovenčina</a>
+              <a style="border: none; color: #1C314D;" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Slovenština</a>
             </li>
             <li class="nav-item">
-              <a style="border: none; color: #1C314D;" class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">English</a>
+              <a style="border: none; color: #1C314D;" class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Angličtina</a>
             </li>
             <li class="nav-item">
-              <a style="border: none; color: #1C314D;" class="nav-item nav-link" id="nav-deutsch-tab" data-toggle="tab" href="#nav-deutsch" role="tab" aria-controls="nav-deutsch" aria-selected="false">Deutsch</a>
+              <a style="border: none; color: #1C314D;" class="nav-item nav-link" id="nav-deutsch-tab" data-toggle="tab" href="#nav-deutsch" role="tab" aria-controls="nav-deutsch" aria-selected="false">Němčina</a>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
@@ -2047,14 +2051,14 @@
               <textarea class="form-control" placeholder="Vyplňte..."></textarea>
             </div></div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="info input-group-prepend">
-              <textarea class="form-control" placeholder="Tu vyplňte..."></textarea>
+              <textarea class="form-control" placeholder="Vyplňte..."></textarea>
             </div></div>
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div class="info input-group-prepend">
-              <textarea class="form-control" placeholder="Fill in here..."></textarea>
+              <textarea class="form-control" placeholder="Vyplňte..."></textarea>
             </div></div>
             <div class="tab-pane fade" id="nav-deutsch" role="tabpanel" aria-labelledby="nav-contact-tab">
               <div class="info input-group-prepend">
-                <textarea class="form-control" placeholder="Hier ausfüllen"></textarea>
+                <textarea class="form-control" placeholder="Vyplňte..."></textarea>
               </div>
             </div>
           </div>
@@ -2066,7 +2070,7 @@
         </div>
       </section>
       </div>
-      <a id="add-service" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Přidat službu</a>
+      <div class="button" id="add-service">+ Přidat službu</div>
 
 
       <!-- PLATBY -->
@@ -2205,9 +2209,9 @@
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Čeština</a>
-          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Slovenčina</a>
-          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">English</a> 
-          <a class="nav-item nav-link" id="nav-de-tab" data-toggle="tab" href="#nav-de" role="tab" aria-controls="nav-de" aria-selected="false">Deutsch</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Slovenština</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Angličtina</a> 
+          <a class="nav-item nav-link" id="nav-de-tab" data-toggle="tab" href="#nav-de" role="tab" aria-controls="nav-de" aria-selected="false">Němčina</a>
          
         </div>
       </nav>
@@ -2220,17 +2224,17 @@
         </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="info input-group-prepend">
-            <textarea class="form-control" placeholder="Fill in here..."></textarea>
+            <textarea class="form-control" placeholder="Vyplňte..."></textarea>
           </div>
         </div>
         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
           <div class="info input-group-prepend">
-            <textarea class="form-control" placeholder="Tu vyplňte..."></textarea>
+            <textarea class="form-control" placeholder="Vyplňte..."></textarea>
           </div>
         </div>
         <div class="tab-pane fade" id="nav-de" role="tabpanel" aria-labelledby="nav-de-tab">
           <div class="info input-group-prepend">
-            <textarea class="form-control" placeholder="Hier ausfüllen"></textarea>
+            <textarea class="form-control" placeholder="Vyplňte..."></textarea>
           </div>
         </div>
 
@@ -2242,8 +2246,8 @@
         <input class="styled-checkbox" id="styled-checkbox-agree" type="checkbox" value="value1">
         <label for="styled-checkbox-agree" class="agree-label">Souhlasím se zpracováním údajů</label>
         <div class="btns">
-          <div class="btn-send">Odeslat ke schválení</div>
-          <div class="btn-cancel">Zrušit</div>
+          <div class="button btn-send">Odeslat ke schválení</div>
+          <div class="button btn-cancel">Zrušit</div>
         </div>
         
       </div>

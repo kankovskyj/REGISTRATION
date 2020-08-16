@@ -16,6 +16,9 @@ $lightBlue: #9EAFC4;
 $darkBlue: #1C314D;
 $green: #44E214;
 $red: #F5241B;
+.hide {
+    opacity: 0;
+}
 .disable {
     display: none;
 }
@@ -52,17 +55,19 @@ body {
     overflow-x: hidden;
     background-color: $offWhite;
     font-family: $regular;
+    
 }
+
+
 .nav {
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     background-color: $white;
     .nav-items {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         width: 85%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         .nav-logo {
             min-width: 150px;
             min-height: 2.5rem;
@@ -72,108 +77,57 @@ body {
             margin-top: auto;
             margin-bottom: auto;
         }
-        .right-controls {
-            margin-left: auto;
+        .btns {
             display: flex;
-            justify-content: space-between;
-            .nav-btn {
-                margin-left: 2rem;
-                width: 12rem;
-                height: 2.5rem;
-                margin-top: auto;
-                margin-bottom: auto;
-                background-color: $darkBlue;
-                border-radius: 13px;
-                text-align: center;
-                line-height: 2.5rem;
-                color: $white;
-                cursor: pointer;
-                transition: 0.2s ease-in;
-                &:hover {
-                    filter: brightness(120%);
-                }
-            }
-            .nav-btn.btn-cancel {
-                background-color: $red;
-            }
-            .nav-btn.btn-invite {
-                color: $darkBlue;
-                background-color: transparent;
-                border: solid 2px $darkBlue;
-                line-height: 2.4rem;
-                &:hover {
-                    color: $white;
-                    background-color: $darkBlue;
-                }
-            }
-            .toggle-btn {
-                width: 4.5rem;
-                height: 2.5rem;
-                margin-top: auto;
-                margin-bottom: auto;
-                border-radius: 50px;
-                display: inline-block;
-                position: relative;
-                background : $red;
-                cursor: pointer;
-                transition: background-color .40s ease-in-out;
-                &.active {
-                  background :$green;
-                  .round-btn{
-                    left: 37px;
-                  }
-                }
-                .round-btn {
-                  width: 30px;
-                  height: 30px;
-                  background-color: $white;
-                  border-radius: 50%;
-                  display: inline-block;
-                  position: absolute;
-                  left: 5px;
-                  top: 50%;
-                  margin-top: -15px;
-                transition: all .30s ease-in-out;
-                }
-                .cb-value {
-                  position: absolute;
-                  left:0;
-                  right:0;
-                  width: 100%;
-                  height: 100%;
-                  opacity: 0;
-                  z-index: 9;
-                  cursor:pointer;
-                }
-            }
-            p {
-                width: 4rem;
-                line-height: 2.5rem;
+            margin-left: auto;
+            margin-right: 2rem;
+            transition: 0.2s ease-in;
+            div {
                 margin-left: 1rem;
-                margin-top: auto;
-                margin-bottom: auto;
-                font-weight: bold;
+                margin-right: 1rem;
             }
         }
-        
-
-        
-        
+        .burger {
+            width: 40px;
+            height: 40px;
+            background-image: url(images/burger.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+        }
     }
 }
 
-.registration {
+.content {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    h1 {
+}
+
+h1 {
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 4rem;
         color: $darkBlue;
+}
+.button {
+    width: 12rem;
+    height: 2.8rem;
+    border-radius: 13px;
+    text-align: center;
+    line-height: 2.8rem;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    background-color: $darkBlue;
+    color: $white;
+    font-size: 1rem;
+    &:hover {
+        filter: brightness(120%);
     }
+}
     
-    .form {
+.form {
         margin-top: 2rem;
         min-width: 320px;
         width: 600px;
@@ -275,8 +229,8 @@ body {
             }
         }
   
-    }
-    .form.opening-hours {
+}
+.form.opening-hours {
         min-width: 100%;
         .opening-customized {
             margin-top: 1rem;
@@ -359,9 +313,9 @@ body {
                 }
             }
         }
-    }
+}
 
-    .form.photos {
+.form.photos {
             min-width: 100%;
         .photo-wrapper {
             min-width: 100%;
@@ -373,9 +327,9 @@ body {
                 margin-right: 1rem;
             }
         }
-    }
+}
 
-    .form.fuel {
+.form.fuel {
         .fuel-row {
             display: flex;
             align-items: center;
@@ -410,21 +364,10 @@ body {
                 }
             }
         }
-    }
-    .btn.btn-primary.btn-lg.active {
-        background-color: $white;
-        color: $darkBlue;
-        border-radius: 13px;
-        border: none;
-        box-shadow: 2px 5px 7px #d8d8d860;
-        border-bottom: 3px solid transparent;
-        transition: border 0.35s;
-        i {
-            font-size: 1rem;
-        }
-    }
+}
 
-    .form.services {
+
+.form.services {
         width: 1250px;
         .service {
             display: flex;
@@ -490,9 +433,9 @@ body {
                 }
             }
         }
-    }
+}
 
-    .form.payments {
+.form.payments {
         .cards-section {
             display: flex;
             width: 1250px;
@@ -507,6 +450,7 @@ body {
                 box-shadow: 2px 5px 7px #d8d8d860;
                 margin-right: 0.5rem;
                 margin-bottom: 2rem;
+                cursor: pointer;
                 img {
                     margin-left: auto;
                     margin-right: auto;
@@ -527,9 +471,9 @@ body {
             }
         }
         
-    }
+}
 
-    .form.info {
+.form.info {
         #nav-tab.nav.nav-tabs {
             background-color: $offWhite;
         }
@@ -547,9 +491,9 @@ body {
             resize: none;
             height: 200px;
         }
-    }
+}
 
-    .form.confirmation {
+.form.confirmation {
         margin-bottom: 4rem;
         .styled-checkbox:checked + label:after {
             top: 15px;
@@ -559,42 +503,16 @@ body {
         }
         .btns {
             display: flex;
-            .btn-send {
-                margin-top: 1rem;
-                width: 12rem;
-                height: 2.5rem;
-                background-color: $darkBlue;
-                border-radius: 13px;
-                text-align: center;
-                line-height: 2.5rem;
-                color: $white;
-                cursor: pointer;
-                transition: 0.2s ease-in;
-                &:hover {
-                    filter: brightness(120%);
-                }
-            }
+            margin-top: 1rem;
+            
             .btn-cancel {
-                margin-top: 1rem;
-                width: 12rem;
-                height: 2.5rem;
                 background-color: $red;
-                border-radius: 13px;
-                text-align: center;
-                line-height: 2.5rem;
-                color: $white;
-                cursor: pointer;
-                transition: 0.2s ease-in;
                 margin-left: 2rem;
-                &:hover {
-                    filter: brightness(120%);
-                }
             }
         }
         
-    }
-
 }
+
 
 .footer {
     width: 100%;
