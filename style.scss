@@ -19,10 +19,54 @@ $red: #F5241B;
 .hide {
     opacity: 0;
 }
+.error {
+    color: $red;
+}
 .disable {
     display: none;
 }
 
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(158, 175, 196, 0.8);
+    position: fixed;
+    z-index: 100;
+    margin: auto;
+    .loader {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+    }
+    .loader-quart {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50px;
+        border: 6px solid rgba(255,255,255,0.4);
+    }
+    .loader-quart:after {
+      content: '';
+      position: absolute;
+      top: -6px; 
+      left: -6px;
+      bottom: -6px;
+      right: -6px;
+      border-radius: 50px;
+      border: 6px solid transparent;
+      border-top-color: #fff;
+      -webkit-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+    }
+  }
+  
+  @keyframes spin {
+      0%{ -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+      100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
 .smaller {
     height: 240px !important;
 }
@@ -48,14 +92,103 @@ $red: #F5241B;
     font-size: 1.2rem;
     color: $lightBlue;
 }
+// Modal
 
+  .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(158, 175, 196, 0.8);
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  .modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    background: $white;
+    z-index: 100;
+    visibility: hidden;
+    display: block;
+    opacity: 0;
+    border-radius: 13px;
+    transition: 0.2s ease-out;  
+    transform: translateY(45px);
+    .close {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 35px;
+        height: 30px;
+        color: $darkBlue;
+        cursor: pointer;
+        border: 0;
+        font-size: 2rem;
+        transition: 0.2s;
+      }
+    p {
+      color: $darkBlue;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: 4rem;
+      width: 400px;
+      font-size: 1.7rem;
+    }
+    .buttons-modal {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 200%);
+      display: flex;
+      .button {
+        margin: 0.5rem;
+      }
+      .button.cancel {
+          background-color: $red;
+      }
+    }
+  }
+  
+  // Class Active
+  
+  .active{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  // When active class is added, that affects the modal class
+  
+  .active + .modal{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+// MODAL END
 
+html {
+    height: 100%;
+}
 body {
+    min-height:100%; 
     width: 100%;
     overflow-x: hidden;
     background-color: $offWhite;
     font-family: $regular;
-    
+    position: relative; 
+    padding-bottom: 3rem;
 }
 
 
@@ -66,6 +199,7 @@ body {
     .nav-items {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 85%;
         margin: auto;
         .nav-logo {
@@ -79,6 +213,7 @@ body {
         }
         .btns {
             display: flex;
+            align-items: center;
             margin-left: auto;
             margin-right: 2rem;
             transition: 0.2s ease-in;
@@ -86,10 +221,17 @@ body {
                 margin-left: 1rem;
                 margin-right: 1rem;
             }
+            a {
+                cursor: pointer;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                color: $darkBlue;
+                vertical-align: middle;
+            }
         }
         .burger {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background-image: url(images/burger.svg);
             background-position: center;
             background-repeat: no-repeat;
@@ -179,6 +321,12 @@ h1 {
         .form-control:focus {
             border-bottom: 3px solid $darkBlue;
         }
+
+        .form-control.denied {
+            border: 3px solid $red;
+            position: relative;
+        }
+
         .styled-checkbox {
             position: absolute; 
             display: none; 
@@ -501,7 +649,7 @@ h1 {
         label {
             font-size: 1.2rem;
         }
-        .btns {
+        .btns-bottom {
             display: flex;
             margin-top: 1rem;
             
@@ -515,12 +663,14 @@ h1 {
 
 
 .footer {
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0; 
     width: 100%;
-    height: 2rem;
+    height: 3rem;
     background-color: $white;
     text-align: center;
     font-size: 0.8rem;
-    line-height: 2rem;
+    line-height: 3rem;
 }
 
 

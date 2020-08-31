@@ -5,26 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <title>uniPAY Registrace</title>
 </head>
 <body>
+  <!-- MODAL -->
+  <div class="mask" role="dialog"></div>
+  <div class="modal" role="alert">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam facere ab consequuntur deserunt quisquam.</p>
+    <button class="close" role="button">x</button>
+    <div class="buttons-modal">
+      <div class="button confirm">Potvrdit</div>
+      <div class="button cancel">Zrušit</div>
+    </div>
+  </div>
+  <!-- LOADER -->
+  <div class="loader-wrapper disable">
+    <span class="loader loader-quart"></span>
+  </div>
   <!-- NAVIGACE -->
   <nav class="nav">
       <div class="nav-items">
         <div class="nav-logo"></div>
 
         <div class="btns hide">
-          <div class="button">Test</div>
-          <div class="button">Test 2</div>
-          <div class="button">Test 3</div>
+          <div class="button loader-btn-test">Spin Loader</div>
+          <div class="button add-error-btn-test">Toggle Error</div>
+          <div class="button pop-modal-btn-test">Pop Modal</div>
+          <a class="user"> <img src="images/user.svg" width="23px" height="23px" alt=""> Uživatel</a>
+          <a class="logout"><img src="images/logout.svg" width="25px" height="25px" alt=""> Odhlásit</a>
         </div>
 
         <div class="burger">
         </div>
       </div>
   </nav>
-
+ 
   <!-- HLAVNÍ WRAPPER -->
   <section class="content registration">
       <h1>Registrace do aplikace uniPAY</h1>
@@ -2256,7 +2271,7 @@
       <div class="form confirmation">
         <input class="styled-checkbox" id="styled-checkbox-agree" type="checkbox" value="value1">
         <label for="styled-checkbox-agree" class="agree-label">Souhlasím se zpracováním údajů</label>
-        <div class="btns">
+        <div class="btns-bottom">
           <div class="button btn-send">Odeslat ke schválení</div>
           <div class="button btn-cancel">Zrušit</div>
         </div>

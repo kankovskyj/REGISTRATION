@@ -12,8 +12,75 @@
   opacity: 0;
 }
 
+.error {
+  color: #F5241B;
+}
+
 .disable {
   display: none;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(158, 175, 196, 0.8);
+  position: fixed;
+  z-index: 100;
+  margin: auto;
+}
+
+.loader-wrapper .loader {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.loader-wrapper .loader-quart {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+}
+
+.loader-wrapper .loader-quart:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .smaller {
@@ -45,11 +112,111 @@
   color: #9EAFC4;
 }
 
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(158, 175, 196, 0.8);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+  height: 400px;
+  background: #fff;
+  z-index: 100;
+  visibility: hidden;
+  display: block;
+  opacity: 0;
+  border-radius: 13px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  -webkit-transform: translateY(45px);
+          transform: translateY(45px);
+}
+
+.modal .close {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 35px;
+  height: 30px;
+  color: #1C314D;
+  cursor: pointer;
+  border: 0;
+  font-size: 2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal p {
+  color: #1C314D;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 4rem;
+  width: 400px;
+  font-size: 1.7rem;
+}
+
+.modal .buttons-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, 200%);
+          transform: translate(-50%, 200%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .buttons-modal .button {
+  margin: 0.5rem;
+}
+
+.modal .buttons-modal .button.cancel {
+  background-color: #F5241B;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.active + .modal {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   width: 100%;
   overflow-x: hidden;
   background-color: #F3F4FA;
   font-family: "Segoe Pro Semibold";
+  position: relative;
+  padding-bottom: 3rem;
 }
 
 .nav {
@@ -65,6 +232,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 85%;
   margin: auto;
 }
@@ -83,6 +253,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
   margin-right: 2rem;
   -webkit-transition: 0.2s ease-in;
@@ -94,9 +267,17 @@ body {
   margin-right: 1rem;
 }
 
+.nav .nav-items .btns a {
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: #1C314D;
+  vertical-align: middle;
+}
+
 .nav .nav-items .burger {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-image: url(images/burger.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -196,6 +377,11 @@ h1 {
 
 .form .form-control:focus {
   border-bottom: 3px solid #1C314D;
+}
+
+.form .form-control.denied {
+  border: 3px solid #F5241B;
+  position: relative;
 }
 
 .form .styled-checkbox {
@@ -566,24 +752,28 @@ h1 {
   font-size: 1.2rem;
 }
 
-.form.confirmation .btns {
+.form.confirmation .btns-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 1rem;
 }
 
-.form.confirmation .btns .btn-cancel {
+.form.confirmation .btns-bottom .btn-cancel {
   background-color: #F5241B;
   margin-left: 2rem;
 }
 
 .footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   background-color: #fff;
   text-align: center;
   font-size: 0.8rem;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

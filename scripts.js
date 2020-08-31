@@ -1,3 +1,39 @@
+//error message add & highlight
+$(".add-error-btn-test").click(function(){
+  $(".form-control-lg").toggleClass("denied");
+  if($(".form-control-lg").hasClass("denied")) {
+    $(".form").append('<i class="error">This is an error message.</i>');
+    } else {
+        $('.error').remove();
+    }
+});
+//modal
+$(".pop-modal-btn-test").on("click", function(){
+  $(".mask").addClass("active");
+});
+
+function closeModal(){
+  $(".mask").removeClass("active");
+}
+$(".confirm").click(function(){
+  $(".mask").removeClass("active");
+});
+$(".cancel").click(function(){
+  $(".mask").removeClass("active");
+});
+$(".close, .mask").on("click", function(){
+  closeModal();
+});
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    closeModal();
+  }
+});
+//loading
+$(".loader-btn-test").click(function(){
+  $(".loader-wrapper").toggleClass("disable");
+});
+
 //navigation open/close
 $('.burger').click(function(){
   $('.btns').toggleClass("hide");
@@ -53,7 +89,7 @@ $('#pause-checkbox-seven').click(function() {
   $("#nedele").toggleClass("smaller");
 })
 
-//method click entire element	
+//payment method click entire element	
 $(document).ready(function() {
   $(".method").click(function() {
       var checkBoxes = $(this).find("input");
